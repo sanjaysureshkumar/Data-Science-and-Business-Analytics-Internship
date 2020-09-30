@@ -73,17 +73,17 @@ rpart1 <- rpart(target ~ SepalLengthCm + SepalWidthCm + PetalLengthCm + PetalWid
     minbucket = round(5 / 3),
     maxdepth = 3,
     cp = 0))
-print(rpart)
+print(rpart1)
 
 
 #Plotting the tree 
 
-fancyRpartPlot(rpart, main="Iris Train Data")
+fancyRpartPlot(rpart1, main="Iris Train Data")
 
 
 #Calculating the importance of each variable 
 
-varImp(rpart, surrogates = FALSE, competes = TRUE)
+varImp(rpart1, surrogates = FALSE, competes = TRUE)
 
 
 #Copying the plot to a png file
